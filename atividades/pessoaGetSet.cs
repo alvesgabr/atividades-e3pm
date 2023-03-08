@@ -23,7 +23,7 @@ class Pessoa
 {
 	private string _primeiroNome;
 	private string _sobrenome;
-	private string _endereço;
+	private string _endereco;
 	private string _telefone;
 	private string _nomeCompleto;
 
@@ -50,8 +50,8 @@ class Pessoa
 
 	public string Endereco
 	{
-		get => this._endereço;
-		set { if (value.Length > 3) this._endereço = value; }
+		get => this._endereco;
+		set { if (value.Length > 3) this._endereco = value; }
 	}
 
 	public string Telefone
