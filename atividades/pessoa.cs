@@ -16,7 +16,6 @@ Implemente um construtor default e um construtor com parâmetros que inicialize 
 
 Finalmente, implemente uma classe MainClass para mostrar o funcionamento da sua classe Pessoa.
 */
-
 using System;
 
 class Pessoa
@@ -28,24 +27,20 @@ class Pessoa
 	public Pessoa(String nome, String endereco, String telefone)
 	{
 		if (nome.Length >= 6)
-		{
 			this.nome = nome;
-		} else {
-			this.nome = "Sem nome";
-		}
 		if (endereco.Length >= 6)
-		{
 			this.endereco = endereco;
-		} else {
-			this.endereco = "Sem endereço";
-		}
 		if (telefone.Length >= 6)
-		{
 			this.telefone = telefone;
-		} else {
-			this.telefone = "Sem telefone"
-		}
 	}
+
+	public Pessoa()
+	{
+		this.nome = "Sem nome";
+		this.endereco = "Sem endereço";
+		this.telefone = "Sem telefone";
+	}
+
 
 	public string primeiroNome()
 	{

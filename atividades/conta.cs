@@ -5,7 +5,6 @@ Em seguida, implemente um atributo chamado numero, que representa o número da c
 
 Finalmente, implemente uma classe MainClass para mostrar o funcionamento da sua classe Conta.
 */
-
 using System;
 
 class Conta
@@ -19,7 +18,7 @@ class Conta
 	public Conta(float saldo)
 	{
 		this.numero = ++Conta.contador;
-		if(saldo >= 0)
+		if (saldo >= 0)
 			this.saldo = saldo;
 		this.criacao = DateTime.Now;
 	}
