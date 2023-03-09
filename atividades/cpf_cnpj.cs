@@ -78,7 +78,7 @@ class PessoaFisica : Pessoa
 	public string Cpf
 	{
 		get => this._cpf;
-		set { if (value.Length == 11) this._cpf = value; }
+		set => this._cpf = (value.Length == 11) ? value : "Inválido";
 	}
 }
 
@@ -94,7 +94,7 @@ class PessoaJuridica : Pessoa
 	public string Cnpj
 	{
 		get => this._cnpj;
-		set { if (value.Length == 14) this._cnpj = value; }
+		set => this._cnpj = (value.Length == 14) ? value : "Inválido";
 	}
 }
 
