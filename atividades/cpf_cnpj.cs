@@ -70,11 +70,9 @@ class PessoaFisica : Pessoa
 {
 	private string _cpf;
 
-	public PessoaFisica(string primeiroNome, string sobrenome) : base(primeiroNome, sobrenome)
+	public PessoaFisica(string primeiroNome, string sobrenome, string cpf) : base(primeiroNome, sobrenome)
 	{
-		this._primeiroNome = primeiroNome;
-		this._sobrenome = sobrenome;
-		this._nomeCompleto = $"{this._primeiroNome} {this._sobrenome}";
+		this.Cpf = cpf;
 	}
 
 	public string Cpf
@@ -88,11 +86,9 @@ class PessoaJuridica : Pessoa
 {
 	private string _cnpj;
 
-	public PessoaJuridica(string primeiroNome, string sobrenome) : base(primeiroNome, sobrenome)
+	public PessoaJuridica(string primeiroNome, string sobrenome, string cnpj) : base(primeiroNome, sobrenome)
 	{
-		this._primeiroNome = primeiroNome;
-		this._sobrenome = sobrenome;
-		this._nomeCompleto = $"{this._primeiroNome} {this._sobrenome}";
+		this.Cnpj = cnpj;
 	}
 
 	public string Cnpj
@@ -125,15 +121,13 @@ class Program
 
 	static void Main(string[] args)
 	{
-		PessoaFisica empregado = new PessoaFisica("Hiro", "Protagonist");
-		empregado.Cpf = "12345678901";
+		PessoaFisica empregado = new PessoaFisica("Hiro", "Protagonist", "12345678901");
 		empregado.Endereco = "TMWAH - Los Angeles";
 		empregado.Telefone = "555 123 45678";
 
 		ExibeInformacoes(empregado);
 
-		PessoaJuridica patrao = new PessoaJuridica("Uncle", "Enzo");
-		patrao.Cnpj = "12345678901234";
+		PessoaJuridica patrao = new PessoaJuridica("Uncle", "Enzo", "12345678901234");
 		patrao.Endereco = "Unknown";
 		patrao.Telefone = "000 000 00001";
 
